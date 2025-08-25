@@ -1,0 +1,207 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.login-container h1 {
+  font-size: 28px;
+  color: #181717;
+  margin-bottom: 30px;
+}
+
+/* Phone Input Group */
+.phone-input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.flag-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.country-code {
+  color: #0e0f0f;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.phone-input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  background: transparent;
+}
+
+/* Error Message */
+.error-message {
+  font-size: 14px;
+  color: #e23744;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  margin-top: 10px;
+}
+
+
+.btn.primary {
+  background-color: #e23744;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #b81d2a;
+  transform: scale(1.03);
+}
+
+.btn.secondary {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn.secondary:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.red-link {
+    color: #e23744; /* Zomato red */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.red-link:hover {
+    text-decoration: underline;
+    color: #c82333; /* Slightly darker red on hover */
+}
+
+/* Home Button */
+.blue-link {
+    color: #7837e2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.blue-link:hover {
+    text-decoration: underline;
+    color: #7837e2;
+}
+
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Separator */
+.or-separator {
+  margin: 20px 0 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Signup Section */
+.signup-section {
+  margin-top: 20px;
+}
+
+.signup-section h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Animations */
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: clickEffect 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .login-container h1 {
+    font-size: 24px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e23744;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}

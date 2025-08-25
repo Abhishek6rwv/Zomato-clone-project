@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <title>Signup | Zomato</title>
+    <link rel="stylesheet" href="signup.css" />
+</head>
+
+<body>
+    <main class="login-container">
+        <pre><h1>Sign up</h1></pre>
+        <!-- Name Input -->
+        <div>
+            <input type="text" placeholder="Full Name" required>
+        </div>
+
+        <!-- Email Input -->
+        <div>
+            <input id="email" type="email" placeholder="Email" required>
+        </div>
+
+         <!-- Checkbox for agreeing to terms -->
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to Zomato's Terms and Conditions</label>
+        </div>
+        <br>
+        <button class="main" id="Create-account">Create account</button>
+
+        <p class="or-separator">OR</p>
+
+        <button class="btn secondary">
+            <img src="google.png" alt="Google" class="icon" />
+            Sign in with Google
+        </button>
+    
+        <div class="login-section">
+            <h3>Already have an account?</h3>
+            <a href="login.html" class="red-link">Login</a>
+            <br>
+           <hr>
+            <a href="index.html" class="blue-link">Home</a>
+        </div>
+       
+    </main>
+
+    <script src="signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgb(226, 55, 68);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo img {
+    height: 40px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(60%);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.overlay-logo {
+    height: 80px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.hero-text {
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.7s ease-out;
+}
+
+/* About Delivery Section */
+.about-delivery {
+    padding: 60px 30px;
+    background-color: #fdf4f5;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.about-delivery h2 {
+    color: #e23744;
+    font-size: 32px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.3s ease-out;
+}
+
+.about-delivery p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    color: #555;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+/* Features Grid */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.feature img {
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    color: #e23744;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .about-delivery h2 {
+        font-size: 26px;
+    }
+}
